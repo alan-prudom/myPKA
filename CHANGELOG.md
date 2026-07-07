@@ -2,6 +2,35 @@
 
 All notable changes to the myPKA scaffold are tracked here. Versions follow semver: MAJOR for breaking structural changes, MINOR for additions, PATCH for fixes.
 
+## [5.0.0] - 2026-07-07
+
+**The scaffold returns to its basic shape: the six core specialists plus the bundled myPKA Cockpit, free.** The two agent packs that earlier downloads bundled into this repo (the App Developer Pack and the Designer Pack) are unbundled. They are now Expansion Packs, part of the myICOR membership, available on the **Expansion Packs page** in the myICOR app. The scaffold itself, including the Cockpit, stays free: it is the basic structure you need to build your AI team, with the core agents everyone needs, and you can build whatever you like on top of it.
+
+> **BREAKING.** The default download's team roster and SOP/Guideline set change shape versus 4.1.1. **Existing folders lose nothing:** `Expansions/*/` is user-state, the scaffold updater never removes an installed pack, and packs you already run keep working and update via their own Expansion update paths. Fresh downloads simply no longer include the two agent packs.
+
+### Removed
+
+- **App Developer Pack unbundled** (was preinstalled since 3.0.0): the `Team/` folders and `.claude/agents/` shims for **Felix** (Frontend Developer), **Vex** (Security Engineer), **Vera** (QA Specialist), their SOPs (`SOP-003`, `SOP-004`, `SOP-005`), and the pack source under `Expansions/app-developer/`. Available with the myICOR membership on the Expansion Packs page.
+- **Designer Pack unbundled** (was preinstalled since 3.0.0): the `Team/` folders and `.claude/agents/` shims for **Iris** (Design System Architect), **Charta** (Infographic Designer), **Pixel** (Visual Specialist), their SOPs (`SOP-006` through `SOP-009`), the `GL-003-design-system` Guideline, and the pack source under `Expansions/designer-pack/`. Available with the myICOR membership on the Expansion Packs page.
+- **`Expansions/.trusted-sources`** no longer ships in the repo. The canonical hash registry is maintained in the private Expansion release pipeline, and integrity hashes surface on the Expansion Packs page at download time. The bundled Cockpit ships in-tree and needs no install-time hash check. (This makes the existing statement in `Expansions/README.md` accurate.)
+
+### Changed
+
+- **Team roster: 12 → 6 specialists.** Root `AGENTS.md`, `Team/agent-index.md`, and the Team Knowledge indexes list the six core specialists: **Larry, Nolan, Pax, Penn, Mack, Silas**. The team grows by hiring through Nolan or by installing Expansion Packs via [[WS-003-install-an-expansion]] (the mechanism is unchanged and stays built in).
+- **The myPKA Cockpit stays bundled and free** at `Expansions/mypka-cockpit/` (cockpit version `1.2.1`, unchanged). First-run activation still builds it under the single upfront consent (ADAPTER-PROMPT § 8-ter); the agent-pack install/verification steps are gone.
+- **SOP/Guideline numbering:** SOP-003 through SOP-009 and GL-003 are vacated by the unbundled packs. A pack installed later reclaims free slots at install time per WS-003; do not back-fill them locally without coordinating.
+- **README, AGENTS.md, CLAUDE.md, ADAPTER-PROMPT.md, LICENSE-MAP.md, Expansions/INDEX.md** rewritten for the basic-plus-Cockpit shape. No copy anywhere claims the agent packs are bundled, preinstalled, or free.
+
+### Fixed
+
+- **`update_check.remote_version_url` pointed at a non-existent repository** (`myICOR/mypka-scaffold`), so the boot-time update check never found the remote version (issue #15). It now points at `https://raw.githubusercontent.com/myICOR/myPKA/main/VERSION`.
+
+### Version files
+
+- `manifest.json` → `scaffold_version` `5.0.0` (authoritative SSOT), `breaking: true`; `expansions.items` reduced to the bundled Cockpit.
+- `VERSION` → `5.0.0` (mirror of the manifest).
+- `.scaffold-version` → `5.0.0` (mirror of the manifest).
+
 ## [4.1.1] - 2026-06-23
 
 **Cockpit day-planner drag-and-drop fix (critical).** A patch release that ships a
@@ -156,42 +185,7 @@ No `mypka.db` regeneration, no team change, and no other scaffold edits are requ
 
 ## [3.0.0] - 2026-06-21
 
-**The all-in-one bundle: base scaffold 2.4.0 + myPKA Cockpit + App Developer Pack + Designer Pack, all preinstalled.** This is the max-capability download for new users — a single folder that ships the full base scaffold plus the local Cockpit viewer and a 12-specialist team out of the box, with no install step required. The à-la-carte packs (Cockpit, App Developer, Designer) remain published separately as the upgrade path for existing scaffolds; both distribution shapes coexist. The major bump reflects that the default download's team roster, SOP/Guideline set, and `Expansions/` contents all change shape — adopters of the base 2.4.0 are unaffected (this is a new bundle SKU, not a forced migration).
-
-### Added
-
-- **myPKA Cockpit v1.0.0 preinstalled** at `Expansions/mypka-cockpit/` — a local, navigable, wikilink-aware viewer over the whole scaffold (reads `mypka.db` read-only). Runtime-type Expansion; self-contained under its folder; declares no team merge. BYO-Claude-key, local-only, **no auto-launch** (the user generates an OS launcher per `launcher/GENERATE-LAUNCHER.md` and starts it themselves). Ships its own `LICENSE` (myICOR Cockpit Personal-Use License, PolyForm-Noncommercial-based), `SECURITY.md`, `DISCLAIMER.md`, and `INSTALL.md`.
-- **App Developer Pack v1.0.1 preinstalled** — adds **Felix** (Frontend Developer), **Vex** (Security Engineer), **Vera** (QA Specialist) to `Team/`, plus `SOP-003-felix-build-a-component`, `SOP-004-vex-security-audit`, `SOP-005-vera-quality-gate`.
-- **Designer Expansion Pack v1.1.0 preinstalled** — adds **Iris** (Design System Architect), **Charta** (Infographic Designer), **Pixel** (Visual Specialist) to `Team/`, plus `SOP-006-author-a-design-system`, `SOP-007-audit-content-for-design-system-compliance`, `SOP-008-build-an-infographic`, `SOP-009-generate-a-styled-image`, and **`GL-003-design-system`** (the previously-reserved design-system SSOT slot, now filled).
-- **Team roster: 6 → 12 specialists.** Root `AGENTS.md` team table and `Team/agent-index.md` updated with all six new specialists and their routing triggers.
-- **Claude Code host shims** at `.claude/agents/` for the six new specialists (`felix`, `vex`, `vera`, `iris`, `charta`, `pixel`), matching the base scaffold's host-binding convention so the bundle dispatches out-of-the-box.
-- **`Expansions/INDEX.md`** now records all three bundled Expansions as preinstalled (3 expansions · 0 invalid · 0 incompatible).
-
-### Licensing
-
-- **Relicensed to NonCommercial.** The base scaffold now ships under **CC BY-NC-SA 4.0** (was a prior permissive posture); free for personal and non-commercial use, with attribution and ShareAlike. The Cockpit runtime ships under the **myICOR Cockpit Personal-Use License** (PolyForm-Noncommercial-1.0.0-based); the App Developer and Designer packs under **CC BY-NC 4.0 (adapted)**.
-- **`LICENSE-MAP.md` added** — a single plain-language map reconciling every subtree's license (base scaffold, Cockpit, both packs) into one coherent, bundle-wide statement, with per-subtree MAY / MAY-NOT boundaries. `README.md`, `NOTICE.md`, and the per-Expansion `LICENSE`/`NOTICE` files reconcile to it.
-
-### Launch-day hardening
-
-- README rewritten for the v3.0.0 all-in-one (12-specialist roster, preinstalled Cockpit interface, both packs preinstalled; version badge 2.1.0 → 3.0.0).
-- ADAPTER-PROMPT and root AGENTS.md reconciled to the bundled-12 roster and the preinstalled-Cockpit setup flow.
-- `.github/` release + snapshot-notify workflow adjustments for the v3.0.0 cut.
-
-### Changed
-
-- **SOP numbering.** SOP-003 through SOP-009 are now claimed by the bundled packs (App Developer → 003–005, Designer → 006–009). Reserved range starts at SOP-010. Descriptive `[[SOP-...]]` wikilinks inside the merged SOPs and the six new agent contracts were rewritten to their auto-numbered slugs per WS-003 §3.2; the à-la-carte pack copies under `Expansions/app-developer/` and `Expansions/designer-pack/` keep descriptive links (they renumber at install time on whatever scaffold they land in).
-- **Guidelines.** GL-003 is no longer reserved — it is filled by the Designer Pack. Next free slot is GL-005.
-
-### Distribution / gates
-
-- **Lex — license posture: RECONCILED.** The base scaffold (CC BY-NC-SA 4.0), the Cockpit's PolyForm-Noncommercial personal-use license, and the two packs' CC BY-NC 4.0 are reconciled into one coherent bundle-license statement in `LICENSE-MAP.md`. Re-verify the BYO-Claude-key allowance against the live Anthropic Usage Policy + Commercial Terms at the moment of public push (Lex owns the legal call).
-- **Vex — bundled-pack security gate: confirm before public push.** Token sweep + trust-tier check over the three preinstalled Expansions (WS-003 §2) across the bundle. To be confirmed green at push time.
-- **BYO-Claude-key compliance:** the Cockpit reads the user's own key locally; no pooling, proxying, central storage, or key in any artifact — re-verified at push time. Release-blocking if violated.
-
-### Migration
-
-New users download this bundle and get everything preinstalled — no action. Existing-scaffold users do **not** need this bundle; they adopt individual capabilities via the à-la-carte packs (Cockpit / App Developer / Designer) through the normal [[WS-003-install-an-expansion]] flow. There is no forced migration from 2.4.0.
+**Historical entry (download withdrawn).** v3.0.0 introduced the bundled download era: it added the myPKA Cockpit v1.0.0 at `Expansions/mypka-cockpit/` (which remains bundled and free today) and it bundled two agent packs (App Developer: Felix/Vex/Vera + SOP-003..005; Designer: Iris/Charta/Pixel + SOP-006..009 + GL-003) directly into the download. As of **5.0.0** those two agent packs are unbundled and available with the myICOR membership on the Expansion Packs page; the bundled-era release downloads (3.0.0 through 4.1.1) were withdrawn. This release also relicensed the base scaffold to **CC BY-NC-SA 4.0** and introduced `LICENSE-MAP.md` and the Cockpit's own license (myICOR Cockpit Personal-Use License, PolyForm-Noncommercial-based), which remain in force.
 
 ### Version files
 

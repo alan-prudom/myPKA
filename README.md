@@ -9,49 +9,43 @@ ICOR® and Paperless Movement® are registered trademarks. See NOTICE.md
 **An AI powered Personal Knowledge Assistance system, based on our business-proven ICOR methodology. Plain markdown. Any LLM. Yours forever.**
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-3.0.0-blue)
+![Version](https://img.shields.io/badge/version-5.0.0-blue)
 ![Built on ICOR](https://img.shields.io/badge/built%20on-ICOR-C99A57)
 
-myPKA is a folder. You drop it on your machine, point your LLM at it, and you have a **full 12-specialist AI team** that organizes your life end to end. **It works on its own.** No database to set up, no SaaS to log into, no vendor to lose your data to.
+myPKA is a folder. You drop it on your machine, point your LLM at it, and you have a **six-specialist AI team** that organizes your life end to end. **It works on its own.** No database to set up, no SaaS to log into, no vendor to lose your data to.
 
-**v3.0.0 is the all-in-one download** — the max-capability bundle, everything preinstalled, no install step:
-
-- The **full 12-specialist team** — the base six (**Larry, Nolan, Pax, Penn, Mack, Silas**) plus the preinstalled **App Developer Pack** (**Felix**, **Vex**, **Vera**) and **Designer Pack** (**Iris**, **Charta**, **Pixel**).
-- The **myPKA Cockpit** interface preinstalled — a local, navigable, wikilink-aware viewer over your whole scaffold. Runs on your machine, BYO-Claude-key, nothing leaves it.
-- Both agent packs preinstalled and merged into your team, with their SOPs and the design-system Guideline already in place.
-
-If you only want the lean base, or you already run an existing scaffold and want to add one capability at a time, the à-la-carte packs (Cockpit, App Developer, Designer) are still published separately. This download just bundles all of it.
+This scaffold is the **basic structure you need to build your own AI team**: the core agents everyone needs (**Larry, Nolan, Pax, Penn, Mack, Silas**), the folder architecture they operate on, the contracts that hold it all together, and the **myPKA Cockpit**: a local, navigable, wikilink-aware interface over your whole scaffold, included and free. It is free, and it stays free. From here you can build whatever you like on top: hire your own specialists through Nolan, or add ready-made **Expansion Packs** (the Designer Pack, the App Developer Pack, and more), which are part of the **myICOR membership** and install from the Expansion Packs page in the myICOR app. See [Expansion Packs (membership)](#expansion-packs-membership) below.
 
 **Watch on YouTube** (newest first):
 
-[![My AI Team Now Has an Interface. All 12 Agents. Free.](github/youtube/launch-thumbnail.png)](https://www.youtube.com/watch?v=FwPlAQeJcXI)
+[![My AI Team Now Has an Interface. All 12 Agents. One Folder.](github/youtube/launch-thumbnail.png)](https://www.youtube.com/watch?v=FwPlAQeJcXI)
 
-- **[My AI Team Now Has an Interface. All 12 Agents. Free.](https://www.youtube.com/watch?v=FwPlAQeJcXI)** — the 12-agent Cockpit launch
+- **[My AI Team Now Has an Interface. All 12 Agents. One Folder.](https://www.youtube.com/watch?v=FwPlAQeJcXI)** — the Cockpit launch
 - **[Claude just killed ALL Note-Taking, Planner, and Health Apps. Here is proof.](https://www.youtube.com/watch?v=5ZgvLBxDqyI)** — the Cockpit reveal
 - **[One Life. One Folder.](https://www.youtube.com/watch?v=51ZVWAjHurI)**
 
 > **Why this is different from other scaffolds.** Most folder structures are someone's preference dressed up as a system. myPKA is the working slice of **ICOR**, a methodology Paperless Movement S.L. and thousands of professionals world wide have been running their own business on for years. Every folder, every routing decision, every specialist contract maps to a piece of that framework. The structure is not arbitrary. The reasoning is teachable. Both matter when you scale past the first week.
 
-## What's new in v3.0.0
+## What's new in v5.0.0
 
-**This is the all-in-one bundle — the max-capability download.** A single folder that ships the full base scaffold, the local **myPKA Cockpit** interface, and a **12-specialist team**, all preinstalled, with no install step.
+**The scaffold returns to its basic shape: the six core specialists plus the myPKA Cockpit, free forever.** Earlier downloads also bundled two agent packs into this repo. Those now live where the rest of the growing pack library lives: on the **Expansion Packs page of the myICOR app**, as part of the myICOR membership.
 
-What's in the box:
+What this means in practice:
 
-- **The full 12-specialist team.** The base six (**Larry, Nolan, Pax, Penn, Mack, Silas**) plus the **App Developer Pack** (**Felix** — Frontend Developer, **Vex** — Security Engineer, **Vera** — QA Specialist) and the **Designer Pack** (**Iris** — Design System Architect, **Charta** — Infographic Designer, **Pixel** — Visual Specialist), already merged into `Team/`, with their SOPs and the `GL-003-design-system` Guideline in place.
-- **The myPKA Cockpit interface, preinstalled** at `Expansions/mypka-cockpit/`. A local, navigable, wikilink-aware viewer over your whole scaffold (reads the SQLite mirror read-only). It runs entirely on your machine, uses **your own Claude key**, and never sends your data anywhere. No auto-launch — you generate a one-click launcher and start it yourself.
-- **Both agent packs and the Cockpit preinstalled.** No download from the AI Library required for these three — they ship inside this bundle.
+- **This repo ships the base team**: Larry, Nolan, Pax, Penn, Mack, Silas, with their contracts, SOPs, Workstreams, and Guidelines. Everything you need to run your knowledge, your journal, your CRM, and your tasks with an AI team. Nothing about the scaffold went paid.
+- **The myPKA Cockpit stays included and free**, preinstalled at `Expansions/mypka-cockpit/`. A local, navigable, wikilink-aware viewer over your whole scaffold (reads the SQLite mirror read-only). It runs entirely on your machine, uses **your own Claude key**, and never sends your data anywhere. No auto-launch — you generate a one-click launcher and start it yourself.
+- **The Expansion mechanism stays built in.** `Expansions/`, the install Workstream ([[WS-003-install-an-expansion]]), and the authoring spec (`Expansions/docs/expansion-spec.md`) all remain, so any pack you download (or write yourself) drops in cleanly.
+- **The Designer Pack (Iris, Charta, Pixel) and the App Developer Pack (Felix, Vex, Vera)** are available with the myICOR membership on the Expansion Packs page, alongside new packs as they release.
+- **Why it's a MAJOR bump.** The default download's team roster and SOP/Guideline set change shape versus the previous bundled download. If you already run a bundled folder, nothing is taken away from you: your installed packs are your state, they keep working, and they update through their own Expansion update paths.
 
-**Why it's a MAJOR bump.** The default download's team roster, SOP/Guideline set, and `Expansions/` contents all change shape. This is a new bundle SKU, not a forced migration — if you already run the lean base scaffold, you are unaffected, and you can still add capabilities one at a time via the à-la-carte packs. See **About this bundle vs. the à-la-carte packs** below.
-
-Everything from the base scaffold carries forward — the task system, per-agent journals, the four-buckets-plus-Goals My Life doctrine, local version history, and the LLM-readable migration changelog. Plain markdown, any LLM, yours forever.
+Everything else carries forward: the task system, per-agent journals, the four-buckets-plus-Goals My Life doctrine, local version history, the self-updater, and the LLM-readable migration changelog. Plain markdown, any LLM, yours forever.
 
 ## Get going now
 
 1. Clone or download the repo into a folder you'll actually use.
 2. Open the folder in your LLM tool (Claude Code, Codex CLI, Gemini CLI, Cursor, or Obsidian + chat plugin).
 3. As your first message, say: **"Read `ADAPTER-PROMPT.md` and follow it to set yourself up."** (This is the reliable bootstrap on every tool — and the fallback if a bare `/init` ever overwrites the shipped `CLAUDE.md` with a generic summary.)
-4. The LLM reads `ADAPTER-PROMPT.md`, personalizes the folder, writes a tool-specific pointer file (`CLAUDE.md`, `GEMINI.md`, etc.), **installs the bundled Expansions and builds the Cockpit dashboard so it's ready to launch**, and reports the team is online. It will ask once for your first name and one "proceed?" consent — everything runs and stays on your machine, nothing is uploaded. When it finishes, double-click the generated launcher in `Expansions/mypka-cockpit/` to open the Cockpit.
+4. The LLM reads `ADAPTER-PROMPT.md`, personalizes the folder, writes a tool-specific pointer file (`CLAUDE.md`, `GEMINI.md`, etc.), **builds the Cockpit dashboard so it's ready to launch**, and reports the team is online. It will ask once for your first name and one "proceed?" consent — everything runs and stays on your machine, nothing is uploaded. When it finishes, double-click the generated launcher in `Expansions/mypka-cockpit/` to open the Cockpit.
 5. Ask "Who are you?" and you'll see Larry is at your service.
 6. Ask "What's open?" and Larry walks the new `Team Knowledge/tasks/open/` folder for you.
 
@@ -84,7 +78,7 @@ If you've ever opened a blank Obsidian vault and didn't know where to put anythi
 
 ## Meet the team
 
-**Twelve specialists ship pre-loaded** in this all-in-one bundle. **You only ever talk to Larry.** Larry routes. The base six are profiled below; the six from the preinstalled App Developer and Designer packs (Felix, Vex, Vera, Iris, Charta, Pixel) are summarized right after the table, with full contracts at `Team/<Name> - <Role>/AGENTS.md`.
+**Six specialists ship pre-loaded.** These are the core agents everyone needs. **You only ever talk to Larry.** Larry routes.
 
 <table>
 <tr>
@@ -115,27 +109,19 @@ If you've ever opened a blank Obsidian vault and didn't know where to put anythi
 
 Each specialist has a contract at `Team/<Name> - <Role>/AGENTS.md` and a `journal/` folder for durable insights. Full routing table at `Team/agent-index.md`.
 
-**Also preinstalled in this bundle — the App Developer Pack and the Designer Pack:**
-
-- **Felix - Frontend Developer.** Builds UI components and frontends to spec; the hands behind the Cockpit's interface work.
-- **Vex - Security Engineer.** Threat-models, audits, and reviews anything that touches keys, MCP configs, or external code — including the security gate on installed Expansions.
-- **Vera - QA Specialist.** Designs and runs the quality gate; the green/red signal before anything ships.
-- **Iris - Design System Architect.** Owns the design system (`GL-003-design-system`) — tokens, components, and the rules everyone else designs against.
-- **Charta - Infographic Designer.** Turns content into clean, on-brand infographics and renders deliverables to HTML/PDF.
-- **Pixel - Visual Specialist.** Generates styled images and avatars within the design system.
-
-> The full team - including further AI specialists you can add via the **AI Library** - is at [myicor.com](https://myicor.com).
+> Want more hands? Grow the team two ways: hire your own specialists through Nolan (the team walks you through it), or add ready-made **Expansion Packs** with the myICOR membership at [myicor.com](https://myicor.com).
 
 ## What lives where
 
 - `PKM/` is your knowledge. `My Life/` holds the five life concepts (Goals, Habits, Topics, Projects, Key Elements). `Documents/`, `CRM/`, `Images/`, and `Journal/` sit alongside it. Notes connect through `[[wikilinks]]`, not nested folders.
 - `Team/` holds your specialists. One folder per agent. Each has its own `AGENTS.md` and its own `journal/` for durable cross-session insights.
 - `Team Knowledge/` holds the team's playbook. SOPs are atomic procedures. Workstreams orchestrate multi-agent flows. Guidelines are static reference info. `tasks/` holds unfinished work the team is tracking across sessions (`open/`, `in-progress/`, `done/<YYYY>/<MM>/`, `cancelled/<YYYY>/<MM>/`).
+- `Expansions/` holds add-on packs. The **myPKA Cockpit** ships preinstalled at `Expansions/mypka-cockpit/`; packs you install later land alongside it. See `Expansions/README.md`.
 - `Deliverables/` is where the team puts work-in-progress and finished artifacts - research briefs, hire workups, multi-file projects. Time-stamped, ephemeral, the team's working surface. **Pax** drops research here. **Nolan** drops hire workups here. **Larry** collects multi-specialist work here.
 - `Team Inbox/` is your drop zone for raw inputs. Drop screenshots, voice memos, business cards, links, or a quick braindump and the team files them into PKM. *"I have something, not sure where"* goes here. **Penn** usually picks it up, **Larry** routes it.
 - `AGENTS.md` at the root is the source of truth for how the whole team behaves.
 
-> **Note on note shape.** Every entity note (a Person, an Organization, a Project, a Goal, a Habit, a Topic, a Key Element, a Document) starts from a template in `Team Knowledge/Templates/`. Structured data lives in YAML frontmatter at the top of the file; narrative lives in the body. The canonical field schemas are in [[Team Knowledge/Guidelines/GL-002-frontmatter-conventions]]. The mypka-interface Properties tab and the SQLite migration both read frontmatter — keep your facts there, your stories in the body.
+> **Note on note shape.** Every entity note (a Person, an Organization, a Project, a Goal, a Habit, a Topic, a Key Element, a Document) starts from a template in `Team Knowledge/Templates/`. Structured data lives in YAML frontmatter at the top of the file; narrative lives in the body. The canonical field schemas are in [[Team Knowledge/Guidelines/GL-002-frontmatter-conventions]]. The Cockpit's Properties tab and the SQLite migration both read frontmatter — keep your facts there, your stories in the body.
 
 ## How a task flows
 
@@ -148,15 +134,6 @@ When the assignee picks it up, the file moves from `open/` to `in-progress/` and
 Next session, Larry walks `tasks/open/` and `tasks/in-progress/` first, before doing anything else. The team starts the day knowing what's waiting and where things stood. Nothing falls on the floor between sessions.
 
 The journal sits next to this. When the assignee learns something durable while working a task — a build pattern that worked, an anti-pattern they want to remember, a rule of thumb — they write a short entry in their `journal/`. The next time a task references that entry, they re-read their own past thinking before starting. Learning compounds across sessions.
-
-## About this bundle vs. the à-la-carte packs
-
-v3.0.0 is a **new bundle SKU**, not a forced migration. Two distribution shapes coexist:
-
-- **This all-in-one bundle** (what you're looking at) ships the base scaffold, the myPKA Cockpit, the App Developer Pack, and the Designer Pack **all preinstalled** — 12 specialists, the Cockpit interface, and every pack SOP/Guideline in place on first clone. No install step. New users wanting the full capability should download this.
-- **The à-la-carte packs** (Cockpit, App Developer, Designer) remain published separately from the AI Library. If you already run the lean base scaffold and want to add **one** capability at a time, install just the pack you need via the normal [[WS-003-install-an-expansion]] flow. Adopters of the base scaffold are **unaffected** by this release — there is nothing to migrate.
-
-After downloading, run `bash validation-script.sh .` from the scaffold root — it exits 0 when the structure is intact. See the `[3.0.0]` entry in [CHANGELOG.md](CHANGELOG.md) for the full bundle manifest.
 
 ## Principles
 
@@ -191,17 +168,15 @@ The full courses live at **[myicor.com](https://myicor.com)**. They cover:
 
 The scaffold works on its own. The course is for people who want to understand why it works, so they can extend it without breaking the model.
 
-## AI Library (membership)
+## Expansion Packs (membership)
 
-This bundle already ships the Cockpit, the App Developer Pack, and the Designer Pack preinstalled — but the **AI Library** at [myicor.com](https://myicor.com) is the membership layer where you download **more** Expansions: drop-in folders that grow your team beyond the twelve specialists here. These Expansions are not in this repo and are not planned to be open-sourced:
+The scaffold you are looking at is genuinely complete: six core specialists, the full folder architecture, the myPKA Cockpit interface, and the built-in Expansion mechanism. **Expansion Packs** are how the team grows beyond it, and they are part of the **myICOR membership**. Members download them from the **Expansion Packs page** inside the myICOR app ([myicor.com](https://myicor.com)); each pack drops into your `Expansions/` folder and installs via the built-in [[WS-003-install-an-expansion]] flow, with integrity hashes shown on the Expansion Packs page at download time. Available packs include:
 
-- **Slack Expansion** so the team can read and act on conversations from your workspace.
-- **Obsidian optimizations** including templates, plugins, and views tuned to the scaffold.
-- **More agent packs** that drop into your `Expansions/` folder: a Marketing pack, a Customer Support pack, a Bookkeeping pack, and others. *(The App Developer and Designer packs are already preinstalled in this bundle.)*
-- **Connector Expansions** for the tools you already live in (Notion, Readwise, Linear, …).
-- **Office hours and walkthroughs** with the team that builds this scaffold.
+- **Designer Pack**: adds Iris (Design System Architect), Charta (Infographic Designer), and Pixel (Visual Specialist), plus their SOPs and the design-system Guideline.
+- **App Developer Pack**: adds Felix (Frontend Developer), Vex (Security Engineer), and Vera (QA Specialist), plus their SOPs.
+- **More packs on a published cadence**: connector Expansions for the tools you already live in, Obsidian optimizations tuned to the scaffold, and further agent packs (Marketing, Customer Support, Bookkeeping, and others).
 
-Membership-only is honest, not a gate. The scaffold here is genuinely complete. The AI Library is for people running serious work on top of it. See `Expansions/docs/expansion-spec.md` for the install model.
+Membership also includes office hours and walkthroughs with the team that builds this scaffold. Membership-gated is honest, not a bait: the scaffold here stays free and complete, and you can always build your own packs with `Expansions/docs/expansion-spec.md`. The membership is for people running serious work on top of it.
 
 ## License and trademarks
 
@@ -209,7 +184,7 @@ Membership-only is honest, not a gate. The scaffold here is genuinely complete. 
 > Source: https://github.com/myICOR/myPKA
 > Licensed under CC BY-NC-SA 4.0. See [`LICENSE`](LICENSE), [`NOTICE.md`](NOTICE.md), and [`LICENSE-MAP.md`](LICENSE-MAP.md).
 
-- **Content and code**: [CC BY-NC-SA 4.0](LICENSE). Free for personal and non-commercial use, with attribution and share-alike. Per-subtree license boundaries (base scaffold, Cockpit, and the Expansion Packs) are mapped in [`LICENSE-MAP.md`](LICENSE-MAP.md).
+- **Content and code**: [CC BY-NC-SA 4.0](LICENSE). Free for personal and non-commercial use, with attribution and share-alike. Per-subtree license boundaries (base scaffold and the bundled Cockpit) are mapped in [`LICENSE-MAP.md`](LICENSE-MAP.md); Expansion Packs installed from the myICOR app carry their own licenses.
 - **Registered trademarks (US)**:
   - PAPERLESS MOVEMENT® - USPTO Reg. No. 6,689,873
   - ICOR® - USPTO Reg. Nos. 6,607,819 and 6,608,200

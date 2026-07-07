@@ -14,6 +14,26 @@ This is the myPKA discipline: nothing the user has to take on faith, everything 
 
 ---
 
+## v5.0.0 (2026-07-07)
+
+### Summary
+
+v5.0.0 unbundles the two agent packs (App Developer: Felix/Vex/Vera; Designer: Iris/Charta/Pixel) from the download. They are Expansion Packs available with the myICOR membership on the Expansion Packs page in the myICOR app. The six core specialists and the bundled myPKA Cockpit stay, free.
+
+### Migration recipe: NONE REQUIRED
+
+There is nothing to run. **Do not delete anything from an existing folder.**
+
+- If your folder came from a 3.x/4.x bundled download, your installed packs live under `Expansions/*/` and your merged agents under `Team/`, all user-state. The scaffold updater never removes them. They keep working and keep updating through their own Expansion update paths.
+- If you self-update the framework files to 5.0.0 (`/update-scaffold` or "update myPKA"), only `framework_paths` files change per `manifest.json`'s `changes` block. Your roster, packs, PKM, journals, tasks, and session logs are untouched.
+- Fresh 5.0.0 downloads simply ship without the two agent packs; install them from the Expansion Packs page via `WS-003-install-an-expansion` when you want them.
+
+### Validation
+
+Run `bash validation-script.sh .`; the script accepts the 5.x line and enforces the same structural checks as 4.x.
+
+---
+
 ## v4.0.0 (2026-06-22)
 
 ### Summary
