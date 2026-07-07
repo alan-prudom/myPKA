@@ -46,19 +46,17 @@ pass() {
 # 1. .scaffold-version exists and is in the v2.x, v3.x, or v4.x line
 # ----------------------------------------------------------------------------
 # All v2.x releases (2.0.x, 2.1.x, ...) share the same structural requirements,
-# so any 2.x value passes this check. v2.0.0 is the six-specialist base (the
-# design trio moved into the Designer Expansion Pack); v2.1.0 added adapter-
-# generated host-native slash commands (no structural change). v3.0.0 is the
-# all-in-one bundle — base 2.4.0 + Cockpit + App Developer Pack + Designer Pack
-# preinstalled (12 specialists, SOP-003..009, GL-003 filled); it is a strict
-# structural superset of v2.x (same required dirs, more agents/SOPs/guidelines),
-# so it passes the same checks. v4.0.0 is the self-updating release — it only
-# ADDS framework files (manifest.json, scripts/update-scaffold.py +
-# check-version.py, the update-scaffold slash command, the cockpit-updater
-# SPEC); it removes no required dir, agent, SOP, or guideline, so it is a strict
-# structural superset of v3.x and passes the same checks. Bump the regex to a
-# tighter line only when a release introduces structural changes that this
-# script must enforce.
+# so any 2.x value passes this check. v2.0.0 is the six-specialist base;
+# v2.1.0 added adapter-generated host-native slash commands (no structural
+# change). v3.x and v4.x were the bundled-download line (Cockpit + agent packs
+# preinstalled), structural supersets of v2.x, so they pass the same checks;
+# v4.0.0 additionally ADDED the self-update framework files (manifest.json,
+# scripts/update-scaffold.py + check-version.py, the update-scaffold slash
+# command). v5.0.0 unbundles the two agent packs (back to the six core
+# specialists; the Cockpit stays bundled); every required dir, SOP, and
+# guideline this script enforces is still present, so it passes the same
+# checks. Bump the regex to a tighter line only when a release introduces
+# structural changes that this script must enforce.
 
 VERSION_FILE="$ROOT/.scaffold-version"
 if [ ! -f "$VERSION_FILE" ]; then
@@ -70,13 +68,16 @@ else
       pass ".scaffold-version is $VERSION (v2.x line)"
       ;;
     3.*)
-      pass ".scaffold-version is $VERSION (v3.x all-in-one line)"
+      pass ".scaffold-version is $VERSION (v3.x bundled line)"
       ;;
     4.*)
       pass ".scaffold-version is $VERSION (v4.x self-updating line)"
       ;;
+    5.*)
+      pass ".scaffold-version is $VERSION (v5.x basic-plus-cockpit line)"
+      ;;
     *)
-      fail ".scaffold-version is '$VERSION', expected '2.x', '3.x', or '4.x'"
+      fail ".scaffold-version is '$VERSION', expected '2.x', '3.x', '4.x', or '5.x'"
       ;;
   esac
 fi

@@ -1,4 +1,4 @@
-# myPKA v3.0 — License Map
+# myPKA License Map
 
 **In one sentence:** You may freely edit every part of myPKA for your own
 private, non-commercial use — change anything to your liking — but you may not
@@ -15,22 +15,15 @@ own `LICENSE` file. Where this guide and a `LICENSE` differ, the `LICENSE` wins.
 |---|---|---|---|---|
 | **Base scaffold** (root markdown: PKM, Team, Team Knowledge, SOPs, etc.) | CC BY-NC-SA 4.0 | Paperless Movement S.L. | Edit, adapt, and customize for your own personal, non-commercial use. Run it with any LLM. | Use commercially / sell it. If you publicly redistribute an adapted version, you must license that shared version under the same CC BY-NC-SA terms (ShareAlike). |
 | **Cockpit runtime** (`Expansions/mypka-cockpit/`) | PolyForm Noncommercial 1.0.0 (adapted: "myICOR Cockpit Personal-Use License") | myICOR | Download, run, read, study, and modify the source (including with your own LLM), and share your changes — all for personal, non-commercial use. | Sell it, sublicense it for a fee, or run it as a paid product / hosted service for others. |
-| **App Developer Pack** (`Expansions/app-developer/`) | CC BY-NC 4.0 (adapted) | Paperless Movement S.L. | Install, run, and freely modify/adapt the specialist contracts and SOPs for your own personal, non-commercial use. Share your changes at no charge. | Sell it, sublicense it for a fee, or redistribute it (original or modified) as part of a commercial product or service. |
-| **Designer Expansion Pack** (`Expansions/designer-pack/`) | CC BY-NC 4.0 (adapted) | Paperless Movement S.L. | Install, run, and freely modify/adapt the specialists, SOPs, and GL-003 for your own personal, non-commercial use. Share your changes at no charge. | Sell it, sublicense it for a fee, or redistribute it (original or modified) as part of a commercial product or service. |
 
-**Common thread across all four:** edit freely for yourself; never sell as your
-own. Attribution and the original copyright/license notices must stay intact in
+**Expansion Packs are licensed separately.** Agent packs you download from the
+myICOR Expansion Packs page (the Designer Pack, the App Developer Pack, and
+others) are not part of this repository. Each pack ships with its own `LICENSE`
+inside its folder; read it on install.
+
+**Common thread:** edit freely for yourself; never sell as your own.
+Attribution and the original copyright/license notices must stay intact in
 anything you share.
-
----
-
-## What changed in v3.0 (relicensing)
-
-Both Expansion Packs previously shipped under restrictive "install-and-run-only"
-proprietary terms that did **not** permit modification. As of v3.0 they move to
-**editable CC BY-NC 4.0**: you may now freely modify and adapt the packs for
-your own non-commercial use. The non-commercial / no-resale boundary is
-unchanged.
 
 ---
 

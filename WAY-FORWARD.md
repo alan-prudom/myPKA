@@ -46,7 +46,7 @@ Workshop details and pricing: [myicor.com](https://myicor.com)
 
 ## When six specialists isn't enough: myICOR membership and the AI Library
 
-Most people hit this wall around month three. The six shipped specialists handle the core knowledge work — capture, research, hiring, automation, and database integrity. They don't handle design work, bookkeeping, frontend development, marketing, or customer support. You start wanting to hire — or to add an Expansion pack like the Designer Pack (Iris, Charta, Pixel) for brand and visual work.
+Most people hit this wall around month three. The six shipped specialists handle the core knowledge work — capture, research, hiring, automation, and database integrity. They don't handle design work, bookkeeping, frontend development, marketing, or customer support. You start wanting to hire, or to add an Expansion Pack from the myICOR Expansion Packs page, like the Designer Pack (Iris, Charta, Pixel) for brand and visual work.
 
 **myICOR membership** at [myicor.com](https://myicor.com) is the layer where the team grows. Membership includes:
 

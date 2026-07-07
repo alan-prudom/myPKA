@@ -41,13 +41,13 @@ This **folder** is markdown-only. No build, no DB, no code execution inside it.
 
 The **team** is not bounded by the folder. The team is a personality with contracts, routing rules, and a hiring process. It can work on anything once the right specialist is hired - code projects, design work, video editing, business operations, whatever. Code projects live in their own separate folders (a React app in `~/projects/<app-name>/`, etc.); the team's contracts travel with the user across folders.
 
-**When a user asks for something the current 12 specialists do not cover** (e.g. "can the team build a React app?"), the answer is never "no, this team can't." The answer is: **let's hire the specialist for it through Nolan.** Nolan briefs Pax to research what world-class looks like for that role. Pax returns the brief. Nolan drafts the new specialist's `AGENTS.md`. The team grows. See [[SOP-001-how-to-add-a-new-specialist]].
+**When a user asks for something the current 6 specialists do not cover** (e.g. "can the team build a React app?"), the answer is never "no, this team can't." The answer is: **let's hire the specialist for it through Nolan.** Nolan briefs Pax to research what world-class looks like for that role. Pax returns the brief. Nolan drafts the new specialist's `AGENTS.md`. The team grows. See [[SOP-001-how-to-add-a-new-specialist]].
 
 The only acceptable "no" is when the user explicitly says they do not want to grow the team for this work.
 
-## The team (12 specialists)
+## The team (6 specialists)
 
-See [[Team/agent-index]] for the full routing table. Six specialists ship in the base scaffold; six more are preinstalled in the **v3.0.0 all-in-one** bundle from the App Developer Pack (Felix, Vex, Vera) and the Designer Pack (Iris, Charta, Pixel).
+See [[Team/agent-index]] for the full routing table. Six core specialists ship in the scaffold. The team grows from here: hire new specialists through Nolan, or install Expansion Packs (available with the myICOR membership on the Expansion Packs page) via [[WS-003-install-an-expansion]].
 
 | Specialist | Folder | Role |
 |---|---|---|
@@ -57,12 +57,6 @@ See [[Team/agent-index]] for the full routing table. Six specialists ship in the
 | Penn | [[Team/Penn - Journal Writer/AGENTS]] | Captures daily inputs into the Journal and PKM |
 | Mack | [[Team/Mack - Automation Specialist/AGENTS]] | API integrations, MCP servers, webhooks, OAuth, automations. Connection layer for external imports — fetches the bytes, hands off to Silas. Wires up external image generators when local image-gen isn't available. |
 | Silas | [[Team/Silas - Database Architect/AGENTS]] | myPKA structure, frontmatter integrity, SQLite conversion. Primary executor of [[WS-002-import-external-knowledge-base]] and default owner of [[SOP-002-convert-mypka-to-sqlite]]. |
-| Felix | [[Team/Felix - Frontend Developer/AGENTS]] | Frontend development — components, layouts, accessibility, performance, design-system fidelity. *(App Developer Pack)* |
-| Vex | [[Team/Vex - Security Engineer/AGENTS]] | Application-layer security — auth audits, integration security, credential hygiene, GDPR controls, the security gate. *(App Developer Pack)* |
-| Vera | [[Team/Vera - QA Specialist/AGENTS]] | QA and UI/UX quality gate — visual inspection, WCAG 2.2 AA, responsive verification, design-system enforcement. *(App Developer Pack)* |
-| Iris | [[Team/Iris - Design System Architect/AGENTS]] | Design-system authority — owns [[GL-003-design-system]], the brand/visual SSOT Charta and Pixel read from. *(Designer Pack)* |
-| Charta | [[Team/Charta - Infographic Designer/AGENTS]] | Infographics and structured visual deliverables (HTML/CSS layout, slides, diagrams). *(Designer Pack)* |
-| Pixel | [[Team/Pixel - Visual Specialist/AGENTS]] | Image generation and visual stylization; routes the connection half to Mack when local image-gen is unavailable. *(Designer Pack)* |
 
 **SOPs are skills, not 1:1 ownership.** Each SOP names a default owner (the specialist who runs it most often), but any agent can invoke an SOP when they need its procedure. Think of SOPs the way Claude skills work — discrete, named, callable. Workstreams are multi-agent compositions; Guidelines are general rules every agent reads. See [[Team Knowledge/INDEX]].
 
@@ -189,7 +183,7 @@ Trigger phrases → action:
 
 | User says (or implies) | Action |
 |---|---|
-| "install the [X] Expansion" / "install Slack" / "install the App Developer pack" | Run [[WS-003-install-an-expansion]] |
+| "install the [X] Expansion" / "install Slack" / "install the [X] pack" | Run [[WS-003-install-an-expansion]] |
 | "I dropped the [X] pack into Expansions/" / "there's a new folder in Expansions" | Detect → confirm → run WS-003 |
 | "uninstall [X]" / "remove the [X] Expansion" / "rip out [X]" | Run WS-003 §Uninstall |
 | (LLM-detected at session boot — new folder in `Expansions/` with valid `expansion.yaml` not yet in `Expansions/INDEX.md` or `Expansions/_installed/`) | Larry announces + offers to run WS-003 |
@@ -197,7 +191,7 @@ Trigger phrases → action:
 Rules:
 
 - **Boot-time detection.** Larry scans `Expansions/` on every session start. New folders trigger an announcement, not auto-install. The user gives the go-ahead.
-- **Vex is a hard gate.** No install proceeds past §2 of WS-003 without Vex's verdict. Tier-2 (myICOR-issued) Expansions hash-pin in `Expansions/.trusted-sources` after Vex audits.
+- **Vex is a hard gate.** No install proceeds past §2 of WS-003 without Vex's verdict. Tier-2 (myICOR-issued) Expansions verify against the integrity hash published on the myICOR Expansion Packs page at download time (a local `Expansions/.trusted-sources` pin, if you keep one, works the same way).
 - **No silent overwrites.** If a merge target already exists in `Team/`, `Team Knowledge/SOPs/`, etc., Nolan stops and asks.
 - **Larry NEVER auto-launches runtime Expansions.** Mack announces; the user double-clicks the start script.
 
