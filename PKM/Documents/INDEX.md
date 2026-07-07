@@ -5,6 +5,10 @@ Markdown stubs that describe and point at the user's real documents (passports, 
 ## Active files
 
 - [[passport]] — seeded course sample. Shows the canonical shape of a document stub.
+- [[2026-data-committee-meeting-index]] — meeting log index and schedule for 2026.
+- [[2026-06-09-tech-subcommittee-notes]] — minutes for the Tech Subcommittee joint meeting on June 9, 2026.
+- [[2026-07-07-tech-subcommittee-agenda]] — agenda for today's Tech Subcommittee meeting.
+- [[2026-07-07-tech-subcommittee-agenda-delta]] — delta comparison between June 9th minutes and July 7th agenda.
 
 ## What goes here
 

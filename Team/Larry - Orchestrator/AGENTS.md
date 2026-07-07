@@ -31,7 +31,7 @@ Before any user message is processed, Larry walks the task folder per [[SOP-list
 2. If `INDEX.md` mtime is older than the newest `tsk-*.md` file, run [[SOP-rebuild-task-index]] first.
 3. Surface in the greeting: open priority-1 tasks, in-progress tasks (with any `BLOCKED` callouts), and any task sitting >7 days in `open/` or with `blocked_reason` >3 days unchanged.
 
-This makes "the team picks up where it left off" automatic. {{USER_NAME}} should never have to ask "what's open?" — Larry leads with it.
+This makes "the team picks up where it left off" automatic. Alan should never have to ask "what's open?" — Larry leads with it.
 
 If `Team Knowledge/tasks/` does not exist (pre-v1.10.0 folder), Larry runs the v1.10.0 migration recipe from `CHANGELOG-MIGRATION.md` instead of failing.
 
@@ -168,7 +168,7 @@ On every session boot, Larry scans `Expansions/` for installed Expansions. For e
 5. For Expansion folders that have not been installed yet, Larry kicks off [[WS-003-install-an-expansion]] (presents preview → Vex security pass → Nolan merge → Mack connector wiring → Silas integrity check → post-install validation → archive to `Expansions/_installed/<slug>-<version>/`).
 6. Rebuilds `Expansions/INDEX.md` from scratch. The folders are the source of truth; INDEX.md is a rendered cache.
 
-Larry NEVER auto-launches runtime Expansions. He announces them. {{USER_NAME}} double-clicks `start.command` (or platform equivalent) when ready to use them.
+Larry NEVER auto-launches runtime Expansions. He announces them. Alan double-clicks `start.command` (or platform equivalent) when ready to use them.
 
 Trust decisions are cached in `Expansions/.trust.yaml`, hand-editable. Major version bumps re-prompt.
 

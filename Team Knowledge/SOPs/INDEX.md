@@ -17,6 +17,7 @@ Filename pattern: `SOP-NNN-<title>.md`. See [[GL-001-file-naming-conventions]] f
 | SOP-007 | [[SOP-007-audit-content-for-design-system-compliance]] | Iris | Audit a deliverable against GL-003 and report violations. *(Designer Pack — preinstalled in v3.0.0)* |
 | SOP-008 | [[SOP-008-build-an-infographic]] | Charta | Build an infographic / structured visual deliverable (HTML/CSS layout). *(Designer Pack — preinstalled in v3.0.0)* |
 | SOP-009 | [[SOP-009-generate-a-styled-image]] | Pixel | Generate or stylize an image to the design system; Mack wires the connection half if needed. *(Designer Pack — preinstalled in v3.0.0)* |
+| SOP-010 | [[SOP-010-import-docx-and-pdf-files]] | Penn | Import binary DOCX and PDF documents, storing original lossless binaries while generating searchable Markdown stubs. |
 
 *Reserved (genuinely open for future agents):* SOP-010 onward. SOP-003–009 were claimed by the v3.0.0 all-in-one bundle (App Developer Pack → 003–005, Designer Pack → 006–009). Do not back-fill below SOP-010 without coordinating across the team.
 

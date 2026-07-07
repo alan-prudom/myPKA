@@ -13,6 +13,7 @@ Example: the Goal *"lose 20 kg"* can be carried by a Project (an 8-week program 
 ## Active files
 
 - [[side-project-mvp]] — seeded course sample. The canonical shape every Project file follows.
+- [[oa-vr-data-and-tech-committee]] — leadership and technical orchestration for the OA Virtual Region Data and Tech Committee.
 
 ## Naming
 

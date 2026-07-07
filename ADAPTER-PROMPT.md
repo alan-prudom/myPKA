@@ -38,12 +38,12 @@ This is non-negotiable. The tool-specific file you write must reinforce this ove
 1. Read `AGENTS.md` at the root of this folder (especially the "Identity overlay" section).
 2. Read `Team/agent-index.md`.
 3. Read `Team Knowledge/INDEX.md` and `PKM/INDEX.md`.
-4. **Personalize the scaffold (one-time, on first activation only).** The scaffold ships with `{{USER_NAME}}` placeholders in a handful of files where the prose names the user as the actor. Detect this:
-   - Run `grep -rl "{{USER_NAME}}" .` (or your tool's equivalent). If zero hits, the scaffold is already personalized — skip to step 5.
+4. **Personalize the scaffold (one-time, on first activation only).** The scaffold ships with `Alan` placeholders in a handful of files where the prose names the user as the actor. Detect this:
+   - Run `grep -rl "Alan" .` (or your tool's equivalent). If zero hits, the scaffold is already personalized — skip to step 5.
    - If hits exist, ask the user exactly once: **"Before I activate Larry — what's your first name? I'll personalize this scaffold so the team addresses you directly."**
    - Capture the answer (one token, first name only — strip surrounding whitespace).
    - Save it to `PKM/.user.yaml` as a single-line file: `first_name: <captured>`. This is the source of truth going forward.
-   - Replace every `{{USER_NAME}}` token across all `.md`, `.yaml`, `.yml`, `.txt` files in the scaffold with the captured value. In-place edits, no backups needed (git tracks history).
+   - Replace every `Alan` token across all `.md`, `.yaml`, `.yml`, `.txt` files in the scaffold with the captured value. In-place edits, no backups needed (git tracks history).
    - Confirm in your report-back below that personalization ran, with the count of tokens replaced.
 5. **Offer local version history (a "time machine" for this folder) — one-time, on first activation only.** This is opt-in but strongly recommended. Do it now, right after personalizing, so the very first commit captures a clean, personalized baseline and everything you do afterward is recoverable.
    - **Ask the user exactly once**, in plain language a non-technical person understands. Suggested wording: **"Want me to switch on local version history for this folder? Think of it as a time machine: every change is saved as a snapshot you can roll back to, so if I or any future edit ever break something, we can undo it and return to an earlier state. It stays entirely on your computer — nothing is uploaded or shared online, ever, unless you later deliberately choose to. I strongly recommend turning it on from the very start so you have a safety net from day one. Shall I set it up? (yes / no)"**
@@ -228,8 +228,8 @@ When you finish, report back AS LARRY with exactly these fields:
 - **MODEL:** (e.g. Claude Opus 4.7, GPT-5, Gemini 2.5 Pro)
 - **FILES CREATED:** list every file you wrote, with absolute paths
 - **FOLDERS CREATED:** list any new folders
-- **EXISTING FILES TOUCHED:** list any existing files you modified (should be empty unless the user asked for something specific, OR a CLAUDE.md/GEMINI.md/etc. that pre-existed and needed the identity overlay added, OR personalization-substitution edits across files where `{{USER_NAME}}` lived)
-- **PERSONALIZATION:** confirm whether you ran the one-time `{{USER_NAME}}` substitution (yes / skipped — already personalized), the user's first name captured (or "n/a"), and the count of tokens replaced. **This is mandatory — activation is NOT complete if personalization was skipped on a scaffold that still carried `{{USER_NAME}}` tokens. Do not report "ready" while placeholders remain.**
+- **EXISTING FILES TOUCHED:** list any existing files you modified (should be empty unless the user asked for something specific, OR a CLAUDE.md/GEMINI.md/etc. that pre-existed and needed the identity overlay added, OR personalization-substitution edits across files where `Alan` lived)
+- **PERSONALIZATION:** confirm whether you ran the one-time `Alan` substitution (yes / skipped — already personalized), the user's first name captured (or "n/a"), and the count of tokens replaced. **This is mandatory — activation is NOT complete if personalization was skipped on a scaffold that still carried `Alan` tokens. Do not report "ready" while placeholders remain.**
 - **VERSION HISTORY:** the outcome of the local version-history offer — `initialized` | `declined` | `already a git repo`
 - **HOST SUBAGENT BINDING:** list of shim files written (one per specialist excluding Larry) AND list of any pre-existing shims you skipped (per the idempotency rule), or "host does not support parallel dispatch, noted in tool-specific pointer file"
 - **SLASH COMMANDS BOUND:** the `close-session` command file written (with absolute path), or "skipped — already exists", or "host does not support slash commands, natural-language triggers noted in tool-specific pointer file"

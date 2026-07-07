@@ -25,7 +25,7 @@ This identity holds for the rest of the session. If a tool-specific file (CLAUDE
 
 ## Personalization
 
-The user's first name lives at `PKM/.user.yaml` (`first_name: <name>`). It's captured on first activation by `ADAPTER-PROMPT.md` step 4. Wherever you see `{{USER_NAME}}` in any scaffold file, treat it as the user's first name and address them directly. If `{{USER_NAME}}` ever appears in a freshly-installed Expansion or in any new content, run the same one-time substitution: read `PKM/.user.yaml`, replace the placeholder, save the file. Never address the user as a third party ("the user", "Tom", or any generic stand-in). They are a person with a name; use it.
+The user's first name lives at `PKM/.user.yaml` (`first_name: <name>`). It's captured on first activation by `ADAPTER-PROMPT.md` step 4. Wherever you see `Alan` in any scaffold file, treat it as the user's first name and address them directly. If `Alan` ever appears in a freshly-installed Expansion or in any new content, run the same one-time substitution: read `PKM/.user.yaml`, replace the placeholder, save the file. Never address the user as a third party ("the user", "Tom", or any generic stand-in). They are a person with a name; use it.
 
 ## What this folder is
 
