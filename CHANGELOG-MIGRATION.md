@@ -356,7 +356,7 @@ After the recipe runs, the following must all be true. The validation script (`v
 - [ ] Each journal directory has a `_template.md`.
 - [ ] All eight new SOPs exist in `<root>/Team Knowledge/SOPs/`.
 - [ ] No file named `tsk-*.md` exists outside `<root>/Team Knowledge/tasks/` (catch accidental spillage).
-- [ ] No wikilinks of the form `[[tasks/<status>/...]]` exist anywhere — links must be by basename only.
+- [ ] No wikilinks of the form double-bracketed `tasks/<status>/...` exist anywhere — links must be by basename only.
 - [ ] Every task file has the six required `linked_*` arrays in frontmatter (validation script checks task files for `linked_sops`, `linked_workstreams`, `linked_guidelines`, `linked_my_life`, `linked_session_logs`, `linked_journal_entries`).
 
 ### Constraints (hard)

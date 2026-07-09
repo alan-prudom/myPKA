@@ -56,6 +56,7 @@ import {
   checkLock, recordFailure, recordSuccess, loginDelay,
   MIN_PIN_LENGTH,
 } from './auth.js';
+import { initSlackBot } from './slack.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = process.env.PORT || 4317;
@@ -1352,3 +1353,7 @@ const onListen = () => {
 tlsOpts
   ? https.createServer(tlsOpts, app).listen(PORT, HOST, onListen)
   : app.listen(PORT, HOST, onListen);
+
+initSlackBot().catch((err) => {
+  console.error('  slack: failed to initialize bot:', err.message);
+});

@@ -8,13 +8,13 @@ assignee: larry
 priority: 4
 
 # Status
-status: open
+status: cancelled
 blocked_reason: null
 blocked_by: null
 
 # Time
 created: 2026-05-10T12:00:00Z
-updated: 2026-05-10T12:00:00Z
+updated: 2026-07-08T17:24:09Z
 due: null
 
 # Provenance
@@ -62,6 +62,12 @@ This is a seed task included with the scaffold so you can see what a real task f
 
 ## Updates
 - 2026-05-10 12:00 (scaffold) — created as scaffold seed task
+- 2026-07-08 17:24 (larry) — cancelled: marked as deleted per user request
 
-## Outcome
-_(filled when you close this — see [[SOP-close-task]])_
+## Outcome (cancelled)
+
+Reason: Marked as deleted/cancelled per user request because it is a seed/demo task.
+
+Superseded by: n/a
+
+Archived deliverables: none

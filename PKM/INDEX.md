@@ -10,6 +10,10 @@ This is the user's personal knowledge. The team's operations side lives in [[Tea
 - **[[PKM/Images/INDEX|Images]]** - single shared image bucket. Nested by `YYYY/MM/`. Images live here, never duplicated elsewhere; entries embed via `![[Images/YYYY/MM/...]]`.
 - **[[PKM/Journal/INDEX|Journal]]** - daily entries, one file per day, nested by `YYYY/MM/`. The inbox of your myPKA.
 
+## External References
+
+- **[R-NotebookLM](hook://file/AqPneSx9q?p=TXkgRHJpdmUvX19TaG9ydGN1dHNfXw==&n=R%2DNotebookLM)** — External reference notebook.
+
 ## How the wiki connects
 
 - The Journal is where new information lands first.

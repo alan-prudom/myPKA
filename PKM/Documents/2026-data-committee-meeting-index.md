@@ -36,7 +36,7 @@ This is the meeting log index and schedule for the OA VR Data and Tech Committee
 | 2026-06-16 | Working Group | See notes from the 2026-06-09 or Master |
 | 2026-06-23 | Data Committee | [2026-06-23 Data Committee agenda](https://docs.google.com/document/d/1VuDe2A1xlWStXwUljrVWyxZ8uvJQJ3VKe5b_G_cB8qs/edit?usp=drivesdk) |
 | 2026-06-30 | Working Group | See notes from the 2026-06-23 or Master |
-| 2026-07-07 | Tech subcommittee | TBD (Today's meeting) |
+| 2026-07-07 | Tech subcommittee | [[2026-07-07-tech-subcommittee-notes|2026-07-07 Tech Subcommittee Notes]] |
 
 ## Next Meetings
 

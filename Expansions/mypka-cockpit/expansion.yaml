@@ -25,7 +25,11 @@ env_vars:
   - { key: WORKBENCH_WRITE_ENABLED, description: "1 enables the Fleeting Notes editor + whiteboards (writes only under PKM/Fleeting Notes/). The launcher defaults this to 1; set 0 for a fully read-only cockpit.", required: false, sensitive: false }
   - { key: PLAN_WRITE_ENABLED,      description: "1 enables saving the day-planner's LOCAL plan layout (mypka-cockpit.db — like browser storage, never the vault, never an external tool). The launcher defaults this to 1.", required: false, sensitive: false }
   - { key: COCKPIT_PIN_HASH,        description: "scrypt hash of the access PIN (never the cleartext PIN). Set it with `npm run set-pin` — written to Team Knowledge/.env.",                                 required: false, sensitive: true }
+  - { key: SLACK_BOT_TOKEN,         description: "Slack Bot User OAuth Token (starts with xoxb-). Used for posting messages.",                                                    required: false, sensitive: true }
+  - { key: SLACK_APP_TOKEN,         description: "Slack App-Level Token (starts with xapp-). Used for Socket Mode event streaming.",                                              required: false, sensitive: true }
+  - { key: COCKPIT_LLM_CMD,         description: "The shell command used to run agent interactions (e.g. gemini, claude). Defaults to gemini.",                                    required: false, sensitive: false }
   - { key: COCKPIT_USE_TLS,         description: "1 serves HTTPS and marks the session cookie Secure. Needs COCKPIT_TLS_CERT + COCKPIT_TLS_KEY.",                  required: false, sensitive: false }
+
   - { key: COCKPIT_TLS_CERT,        description: "Path to a TLS certificate (only with COCKPIT_USE_TLS=1).",                                                       required: false, sensitive: false }
   - { key: COCKPIT_TLS_KEY,         description: "Path to the TLS private key (only with COCKPIT_USE_TLS=1).",                                                     required: false, sensitive: true }
 

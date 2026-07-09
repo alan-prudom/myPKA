@@ -11,6 +11,8 @@ Filename pattern: `SOP-NNN-<title>.md`. See [[GL-001-file-naming-conventions]] f
 | SOP-001 | [[SOP-001-how-to-add-a-new-specialist]] | Nolan | Step-by-step procedure to draft and onboard a new team specialist. References [[GL-001-file-naming-conventions]]. |
 | SOP-002 | [[SOP-002-convert-mypka-to-sqlite]] | Silas (run by the user via paste-into-LLM prompt) | Generate a SQLite mirror of your myPKA on demand. Markdown stays canonical; SQLite is a derived performance layer. Body is a paste-into-LLM prompt. |
 | SOP-010 | [[SOP-010-import-docx-and-pdf-files]] | Penn | Import binary DOCX and PDF documents, storing original lossless binaries while generating searchable Markdown stubs. |
+| SOP-011 | [[SOP-011-import-audio-and-video-recordings]] | Penn | Document cloud-linked meeting recordings in myPKA, checking for identifying details. |
+| SOP-012 | [[SOP-012-voice-to-text-transcription]] | Mack/Penn | Transcribe audio meeting recordings into searchable text stubs in myPKA. |
 
 *Reserved (genuinely open for future agents):* SOP-003 onward. Agent packs installed from the myICOR Expansion Packs page claim the lowest free slots at install time (per [[WS-003-install-an-expansion]] §3.2); for example, the App Developer Pack claims 003 to 005 and the Designer Pack 006 to 009 when installed. Do not back-fill these slots without coordinating across the team.
 

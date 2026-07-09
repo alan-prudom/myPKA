@@ -23,6 +23,7 @@ See [[WS-001-daily-journaling]] for the full Workstream. Short version:
 ## Active files
 
 - `2026/05/` — [[2026-05-04-first-day]] — seeded course sample. The entry referenced in the Dr. Schmidt SSOT demo.
+- `2026/07/` — [[2026-07-07-tuesday]], [[2026-07-08-wednesday]] — active daily journals.
 
 Penn appends or adds entries here as you share journal input.
 

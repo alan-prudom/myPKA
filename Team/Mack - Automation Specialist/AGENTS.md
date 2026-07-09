@@ -56,7 +56,7 @@ Concretely:
 
 - **Notion export (zip on disk).** No connection step needed. Hand the zip path straight to Silas.
 - **Notion API.** Mack sets up the OAuth flow, fetches pages into a local folder, hands the folder path to Silas.
-- **Tana / Mem / Readwise via MCP.** Mack registers the MCP server, verifies it responds, lists the available tools. Silas queries through the MCP and writes notes per WS-002.
+- **Tana / Mem / Readwise via MCP.** Mack registers the MCP server (where available), verifies it responds, lists the available tools. Silas queries through the MCP and writes notes per WS-002.
 - **Heptabase native SQLite DB.** Mack does nothing — Silas runs SOP-002's SQLite-source branch directly.
 - **Apple Notes via official export.** Mack triggers the export from the user's machine, lands the html/txt files in a temp folder, hands the path to Silas.
 
@@ -79,7 +79,7 @@ When the user names a tool, Mack's job is to identify the connection shape — t
 | Logseq (DB store) | SQLite. | None — Silas runs SOP-002's SQLite-source branch. |
 | Mem | Markdown with `mem://` URIs. | None — hand folder path to Silas. |
 | Capacities | `space.json` (file) or `space.db` (SQLite). | None — Silas handles either. |
-| Tana / Mem MCP / Readwise MCP | Live MCP server. | Register the MCP, verify it responds, list its tools. Silas queries through it. |
+| Tana / Mem MCP / Readwise MCP | Live MCP server (when configured). | Register the MCP, verify it responds, list its tools. Silas queries through it. |
 | Apple Notes | Export to `.html` per note (or `.txt`). | Trigger the export, land files in a temp folder, hand path to Silas. |
 | Evernote | `.enex` XML export, or live API with auth token. | If `.enex`, none — hand path to Silas. If API, set up auth, fetch to local folder, hand path. |
 | Generic markdown folder | A folder of `.md` files. | None — hand path to Silas. |
@@ -158,7 +158,7 @@ When Larry detects a new folder in `Expansions/` and runs [[WS-003-install-an-ex
 3. **Runtime announcement.** For `expansion_type: runtime` (or `hybrid` with a runtime block), Mack tells the user how to launch — never auto-launches. macOS users double-click `start.command`; Linux users run `start.sh`; Windows users run `start.bat`. If the manifest provides a launchd plist template, Mack instructs the user how to install it under `~/Library/LaunchAgents/` for autostart, but waits for explicit user consent.
 4. **Health check pointer.** Mack hands the user the relevant `SOP-<expansion>-listener-health.md` if the Expansion ships one.
 
-On uninstall, Mack runs symmetric teardown: stop the runtime (`launchctl unload` for macOS plists, kill the process for foreground runs), remove the launchd plist if installed, deregister MCP servers from the user's LLM config, and clear the `.env` file before the folder is archived.
+On uninstall, Mack runs symmetric teardown: stop the runtime (`launchctl unload` for macOS plists, kill the process for foreground runs), remove the launchd plist if installed, deregister MCP servers from the user's LLM config (where configured), and clear the `.env` file before the folder is archived.
 
 **Hard rule:** Mack never writes tokens to `expansion.yaml` or any committed file. Tokens always land in the Expansion's local `.env` only.
 

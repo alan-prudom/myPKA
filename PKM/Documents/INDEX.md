@@ -9,6 +9,10 @@ Markdown stubs that describe and point at the user's real documents (passports, 
 - [[2026-06-09-tech-subcommittee-notes]] — minutes for the Tech Subcommittee joint meeting on June 9, 2026.
 - [[2026-07-07-tech-subcommittee-agenda]] — agenda for today's Tech Subcommittee meeting.
 - [[2026-07-07-tech-subcommittee-agenda-delta]] — delta comparison between June 9th minutes and July 7th agenda.
+- [[2026-07-07-tech-subcommittee-notes]] — minutes for the Tech Subcommittee joint meeting on July 7, 2026.
+- [[2026-07-07-tech-subcommittee-recording]] — audio recording of the July 7, 2026 meeting.
+- [[2026-07-07-fs-step-study-orientation-recording]] — audio recording of the Step Study orientation on July 7, 2026.
+
 
 ## What goes here
 

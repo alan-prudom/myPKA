@@ -15,6 +15,14 @@ Topics are the signal layer, so keep them shallow: roughly **three levels deep**
 ## Active files
 
 - [[ai-tooling]] — seeded course sample. Note the "Current pulse" section — that energy is what a Topic file should carry.
+- [[shared-space]] — community and fellowship space for recovery.
+- [[serenity-space]] — recovery meeting focus on serenity.
+- [[vr-data-committee]] — discussions, audits, and tasks for the Virtual Region Data Committee.
+- [[fs-step-study]] — OA Foot Steps Step Study.
+- [[fs-board-meeting]] — OA Foot Steps Board Meeting.
+- [[fs-gdpr]] — OA Foot Steps GDPR Working Group.
+- [[fs-security-committee]] — OA Foot Steps Security Committee.
+- [[fs-meetings-committee]] — OA Foot Steps Meetings Committee.
 
 ## Naming
 

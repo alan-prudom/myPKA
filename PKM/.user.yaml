@@ -1,1 +1,4 @@
 first_name: Alan
+external_pkm:
+  name: R-NotebookLM
+  location: hook://file/AqPneSx9q?p=TXkgRHJpdmUvX19TaG9ydGN1dHNfXw==&n=R%2DNotebookLM
